@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Chat App</title>
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="js/client.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/msg.svg" type="image/x-icon" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#6d27ef" />
+    <link rel="icon" href="/assets/msg.svg" />
+  </head>
+  <body>
+    <div class="join-overlay" id="join-overlay">
+      <div class="join-box">
+        <h2>Enter Your Name 👋</h2>
+        <form id="join-form">
+          <input
+            type="text"
+            id="nameInput"
+            placeholder="Your name..."
+            required
+          />
+          <button type="submit" class="join-btn">Join Chat</button>
+        </form>
+      </div>
+    </div>
+    <nav>
+      <div class="nav-content">
+        <img class="logo" src="assets/msg.svg" alt="" />
+        <h1>Live Chat Room 💬</h1>
+      </div>
+    </nav>
+
+    <div class="chat-wrapper">
+      <div class="container" id="chat-container">
+        <!-- Example Messages -->
+        <!-- <div class="message left">Rahul: Hey there!</div> -->
+        <!-- <div class="message right">Om: Hello!</div> -->
+        <!-- <div class="message center">Rahul joined the chat</div>  -->
+      </div>
+
+      <form action="#" id="send-container" class="send">
+        <input
+          type="text"
+          name="messageInp"
+          id="messageInp"
+          placeholder="Type your message..."
+        />
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </div>
+  </body>
+</html>
